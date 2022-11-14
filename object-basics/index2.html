@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Object basics: Task 2</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+
+    <section class="preview">
+
+
+
+    </section>
+
+  </body>
+  <script>
+    let bandInfo;
+
+    // Add your code here
+
+    const band = {
+      name: "Queen",
+      nationality: "England",
+      genre: "rock",
+      members: 4,
+      formed: 1970,
+      split: 1991,
+      albums: [
+        {
+          name: "Queen",
+          released: 1973
+        },
+        {
+          name: "A Night at the Opera",
+          released: 1975
+        },
+        {
+          name: "Made in Heaven",
+          released: 1995
+        }
+      ]
+    }
+
+    bandInfo = `${band.name} is a band from ${band.nationality} formed by ${band.members} in ${band.formed} that plays ${band.genre} music. The band played together for ${band.split - band.formed} years before the death of the lead singer, Freedie Mercury, and their firt album was ${band.albums[0]["name"]} released in ${band.albums[0]["released"]}.`
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector('section');
+    let para1 = document.createElement('p');
+    para1.textContent = bandInfo;
+    section.appendChild(para1);
+  </script>
+
+</html>
