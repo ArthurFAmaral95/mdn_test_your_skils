@@ -69,9 +69,13 @@ class Ball {
           ball.color =randomRGB();
           this.color = randomRGB();
           this.velX = -(this.velX);
+          ball.velX = -(ball.velX);
           this.velY = -(this.velY);
+          ball.velY = -(ball.velY);
           this.x += this.velX;
+          ball.x += ball.velX;
           this.y += this.velY;
+          ball.y += ball.velY;
         }
       }
     }
